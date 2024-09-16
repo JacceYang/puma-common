@@ -1,4 +1,6 @@
-com/explorx/puma/common/rpc/RpcResponse.class
-com/explorx/puma/common/rpc/RpcResponseUtils.class
-com/explorx/puma/common/web/WebResponse.class
-com/explorx/puma/common/web/WebResponseUtils.class
+com/explorx/puma/common/rpc/RpcResultUtils.class
+com/explorx/puma/common/web/HttpResult.class
+com/explorx/puma/common/web/HttpResultUtils.class
+com/explorx/puma/common/rpc/RpcResult.class
+com/explorx/puma/common/dto/UserBaseInfo.class
+com/explorx/puma/common/utils/SnowflakeIdWorker.class

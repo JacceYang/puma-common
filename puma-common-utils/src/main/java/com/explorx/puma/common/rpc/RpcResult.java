@@ -2,10 +2,12 @@ package com.explorx.puma.common.rpc;
 
 import java.io.Serializable;
 
-public class RpcResponse implements Serializable {
+public class RpcResult implements Serializable {
 
     int code;
     String msg;
+
+    Object data;
 
     public int getCode() {
         return code;
@@ -23,6 +25,14 @@ public class RpcResponse implements Serializable {
         this.msg = msg;
     }
 
-    public RpcResponse() {
+    public Object getData() {
+        return data;
+    }
+
+    public void setData(Object data) {
+        this.data = data;
+    }
+
+    public RpcResult() {
     }
 }

@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="puma-common-utils" />
+        <module name="puma-common-login" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
