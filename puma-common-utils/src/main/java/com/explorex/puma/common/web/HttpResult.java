@@ -1,6 +1,8 @@
 package com.explorex.puma.common.web;
 
 
+import com.explorex.puma.common.HttpErrorCodeEum;
+
 import java.io.Serializable;
 
 public class HttpResult implements Serializable {
@@ -52,6 +54,13 @@ public class HttpResult implements Serializable {
         HttpResult response = new HttpResult();
         response.setCode(code);
         response.setMsg(msg);
+        return response;
+    }
+
+    public static  HttpResult fail(HttpErrorCodeEum codeEum){
+        HttpResult response = new HttpResult();
+        response.setCode(codeEum.getValue());
+        response.setMsg(codeEum.getDesc());
         return response;
     }
 }
