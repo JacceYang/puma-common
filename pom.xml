@@ -92,4 +92,30 @@
       </plugins>
     </pluginManagement>
   </build>
+
+
+  <repositories>
+    <repository>
+      <id>github</id>
+      <name>GitHub Apache Maven Packages</name>
+      <url>https://maven.pkg.github.com/JacceYang/mvn_rep</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+
+  <!-- 如果要发布到 GitHub Packages -->
+  <distributionManagement>
+    <repository>
+      <id>github</id>
+      <name>GitHub Packages</name>
+      <url>https://maven.pkg.github.com/JacceYang/mvn_rep</url>
+    </repository>
+  </distributionManagement>
+
+
 </project>
