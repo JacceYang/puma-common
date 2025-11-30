@@ -41,6 +41,6 @@ jobs:
       run: mvn -B package --file pom.xml
 
     - name: Deploy Maven packages to GitHub Packages (mvn_rep)
-      run: mvn -B -U -DskipTests deploy --file pom.xml -pl puma-common-login puma-common-utils
+      run: mvn -B -U -DskipTests deploy --file pom.xml -pl puma-common-login,puma-common-utils
       env: # 将CI使用的GITHUB_TOKEN传递给Maven环境
         GITHUB_TOKEN: ${{ secrets.GB_TOKEN }}
