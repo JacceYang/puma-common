@@ -25,6 +25,8 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
+        server-username: ${{ github.actor }}
+        server-password: ${{ secrets.GH_PACKAGES_TOKEN }}
         settings-path: ${{ github.workspace }} # location for the settings.xml file
 
     - name: Cache Gradle dependencies
