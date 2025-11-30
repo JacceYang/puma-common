@@ -65,12 +65,12 @@ public class TokenService {
                 }else if(claims.get("uid") instanceof Long){
                     useId= (Long) claims.get("uid");
                 }
-                user = LoginUser.builder()
-                        .userName((String) claims.get("userName"))
-                        .token(token)
-                        .loginTime((Long) claims.get("createTime"))
-                        .user(new User(useId, (String) claims.get("userName"), 0))
-                        .build();
+                LoginUser tmp = new LoginUser();
+                tmp.setUserName((String) claims.get("userName"));
+                tmp.setToken(token);
+                tmp.setLoginTime((Long) claims.get("createTime"));
+                tmp.setUser(new User(useId, (String) claims.get("userName"), 0));
+                user = tmp;
                 RedisCache.setCacheObject(userKey,user,0,TimeUnit.MINUTES);
             }
             return user;

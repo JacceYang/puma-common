@@ -1,9 +1,7 @@
 package com.explorex.puma.common.login;
 
-import lombok.Builder;
 import java.io.Serializable;
 
-@Builder
 public class LoginUser implements Serializable {
 
     private String token;
